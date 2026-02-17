@@ -19,8 +19,8 @@ const app = {
                             <small>
                             ${auto.motor?.desplazamiento || ''} ${auto.motor ? auto.motor.desplazamiento + 
                                 ', ' + auto.motor.potencia + 
-                                ', '+ auto.motor.rendimiento + ', ' +
-                                auto.datostecnicos.motor +  ', ' + auto.datos.transmision + ', ' +
+                                ', '+ auto.motor.rendimiento :
+                                auto.datostecnicos.motor +  ', ' + auto.datostecnicos.transmision + ', ' +
                                 auto.datostecnicos.velocidadmax
 
                             }
