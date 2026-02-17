@@ -17,7 +17,13 @@ const app = {
                             <span>${auto.anio}</span>
                             <br>
                             <small>
-                            ${auto.desplazamiento}, ${auto.potencia},  ${auto.rendimiento}
+                            ${auto.motor?.desplazamiento || ''} ${auto.motor ? auto.motor.desplazamiento + 
+                                ', ' + auto.motor.potencia + 
+                                ', '+ auto.motor.rendimiento + ', ' +
+                                auto.datostecnicos.motor +  ', ' + auto.datos.transmision + ', ' +
+                                auto.datostecnicos.velocidadmax
+
+                            }
                             </small>
                         </div>
                         </div>
