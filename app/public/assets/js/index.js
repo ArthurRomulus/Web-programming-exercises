@@ -5,12 +5,12 @@ const app = {
     cargarFichas : function () {
         const fichas = document.querySelector("#fichas");
         let html = "";
-        fetch(this.urlDatos).then(response => response.json).then(autos => {
+        fetch(this.urlDatos).then(response => response.json()).then(autos => {
             for (let auto of autos){
-                if (filtro === "todos" || auto.tipo === "filtro"){
+                if (this.filtro === "todos" || auto.tipo === "filtro"){
                     html += `
                     <div class="ficha">
-                        <img src="${auto.foto}" alt="${auto.modelo}">
+                        <img src="/resources/images/${auto.foto}" alt="${auto.modelo}">
                         <div class="datos">
                             <h3>${auto.marca}</h3>
                             <span>${auto.modelo}</span>
@@ -22,7 +22,6 @@ const app = {
                                 ', '+ auto.motor.rendimiento :
                                 auto.datostecnicos.motor +  ', ' + auto.datostecnicos.transmision + ', ' +
                                 auto.datostecnicos.velocidadmax
-
                             }
                             </small>
                         </div>
@@ -31,12 +30,10 @@ const app = {
                 }
             }
             fichas.innerHTML = html;
-        }).catch( err => console.error (err));
-        
-
+        }).catch( err => console.error (err));  
     },
-    
 };
 
-
-app.cargarFichas();
+window.onload = function(){
+    app.cargarFichas();
+}
