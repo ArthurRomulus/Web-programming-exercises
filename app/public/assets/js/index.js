@@ -36,4 +36,14 @@ const app = {
 
 window.onload = function(){
     app.cargarFichas();
+
+    const amenu = this.document.querySelectorAll("a.menu");
+
+    amenu.forEach(menuItem => {
+        menuItem.addEventListener("click", event => {
+            event.preventDefault();
+            app.filtro = menuItem.getAttribute("data-filtro");
+            app.cargarFichas();
+        })
+    });
 }
