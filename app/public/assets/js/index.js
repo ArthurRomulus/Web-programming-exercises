@@ -30,6 +30,7 @@ const app = {
                     `;
                 }
             }
+            fichas.innerHTML = html;
         }).catch( err => console.error (err));
         
 
