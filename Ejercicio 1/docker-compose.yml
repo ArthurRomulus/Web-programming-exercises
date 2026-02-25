@@ -5,7 +5,7 @@ services:
     container_name: Ejercicio1_app # Nombre del contenedor pe. Ejercicio1_app, etc
     restart: unless-stopped
     ports: 
-      - "80001:80" # Mapear el puerto 8001 del host al puerto 80 del contenedor, Para Ejercicio 1: 8001, para Ejercicio 2: 8002, etc
+      - "8001:80" # Mapear el puerto 8001 del host al puerto 80 del contenedor, Para Ejercicio 1: 8001, para Ejercicio 2: 8002, etc
     volumes:
       - ./app:/var/www/html # Montar el directorio actual en el contenedor
     networks:    
