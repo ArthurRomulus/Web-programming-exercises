@@ -11,10 +11,11 @@ const app = {
   /**Cargar las publicaciones (posts) desde la API y mostrarlas mediante DOM */
 
   loadPosts : function (){
-    fetch(this.urlPosts)
-        .then(response => response.json())
-        .then(json => console.log(json));
-    
+        try{
+
+        } catch (err){
+            crossOriginIsolated.error("Se produjo un error al cargar las publicaciones", err);
+        }
   }
 
 };
