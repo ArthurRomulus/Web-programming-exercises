@@ -14,7 +14,19 @@ const app = {
         try{
             //const cont = document.querySelector("#content");
             const $cont = $("#content");
+            $cont
+                .css("width", "100%",)
+                .addClass("mx-auto mt-5");
+
+            let html = "";
+            const users = await(fetch(this.urlUsers).then(resp => json()));
+            const posts = await(fetch(this.urlPosts).then(resp => resp.json()));
+            const commets = await(fetch(this.urlComments).then(resp => resp.json()));
+            posts.forEach(post => {
+                html += '
             
+                ';
+            });
         } catch (err){
             console.error("Se produjo un error al cargar las publicaciones", err);
         }
