@@ -12,9 +12,11 @@ const app = {
 
   loadPosts : function (){
         try{
-
+            //const cont = document.querySelector("#content");
+            const $cont = $("#content");
+            
         } catch (err){
-            crossOriginIsolated.error("Se produjo un error al cargar las publicaciones", err);
+            console.error("Se produjo un error al cargar las publicaciones", err);
         }
   }
 
