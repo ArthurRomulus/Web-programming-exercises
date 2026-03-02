@@ -23,9 +23,9 @@ const app = {
             const posts = await(fetch(this.urlPosts).then(resp => resp.json()));
             const commets = await(fetch(this.urlComments).then(resp => resp.json()));
             posts.forEach(post => {
-                html += '
-            
-                ';
+                html += `
+                
+            `;
             });
         } catch (err){
             console.error("Se produjo un error al cargar las publicaciones", err);
