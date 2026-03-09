@@ -88,8 +88,8 @@
     loadUsers : async function(){
     },
     userPosts : function(uid){
-        $(`#up${this.userId}`).removeClass("active")
-        $(`#up${uid}`);
+        $(`#up${this.userId}`).removeClass("active");
+        $(`#up${uid}`).addClass("active");
     }
 
 
