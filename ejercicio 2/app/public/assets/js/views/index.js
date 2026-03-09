@@ -90,6 +90,8 @@
     userPosts : function(uid){
         $(`#up${this.userId}`).removeClass("active");
         $(`#up${uid}`).addClass("active");
+        this.userId = uid;
+        this.loadPosts();
     }
 
 
