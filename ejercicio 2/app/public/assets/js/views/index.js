@@ -43,7 +43,7 @@
                 .css("width", "100%")
                 .addClass("mx-auto mt-5")
             let html = ""
-            let urlaux = this.userId ? `?userId=${this.userId}`;
+            let urlaux = this.userId  `?userId=${this.userId}`
             const posts = await fetch(this.urlPosts).then(resp => resp.json() )
             const users = await fetch(this.urlUsers).then(resp => resp.json() )
 
