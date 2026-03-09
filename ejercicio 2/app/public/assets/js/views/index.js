@@ -43,10 +43,11 @@
                 .css("width", "100%")
                 .addClass("mx-auto mt-5")
             let html = ""
+            let urlaux = this.userId ? `?userId=${this.userId}`;
             const posts = await fetch(this.urlPosts).then(resp => resp.json() )
             const users = await fetch(this.urlUsers).then(resp => resp.json() )
 
-
+            
             posts.forEach(post  => {
                 const user = users.find(user => user.id === post.userId) //filtrar al usuario autor de la publicacion
                 html += `
