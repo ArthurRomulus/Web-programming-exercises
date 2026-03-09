@@ -6,6 +6,8 @@
 
     //Variables de estado 
 
+    userId : "",
+
     //**Cargar las publicaciones (post) desde la API y mostrarla mediante DOM */
     loadComments: async function(postId){},
 
@@ -85,7 +87,10 @@
     },
     loadUsers : async function(){
     },
-
+    userPosts : function(uid){
+        $(`#up${this.userId}`).removeClass("active")
+        $(`#up${uid}`);
+    }
 
 
 }
