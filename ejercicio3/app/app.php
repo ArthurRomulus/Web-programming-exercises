@@ -14,7 +14,7 @@
             print_r($_GET);
             $this -> initConfig();
             $this -> loadFunctions();
-            echo CONTROLLERS;
+            ver_array($_GET);
         }
 
         private function initConfig() {
