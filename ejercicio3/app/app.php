@@ -34,6 +34,9 @@
             return;
         }
 
+        private function  initAutoLoader() {
+            
+        }
 
         public static function run(){
             $app = new self();
