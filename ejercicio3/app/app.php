@@ -6,7 +6,19 @@
 
     class App{
         public function __construct(){
-            
+            $this -> init();
+
+        }
+
+        private function init(){
+            print_r($_GET);
+        }
+
+        public static function run(){
+            $app = new self();
         }
     }
+
+    run();
+
 ?>
