@@ -14,6 +14,12 @@
             print_r($_GET);
         }
 
+        private function initConfig() {
+            if (!file_exists(__DIR__ . "/config.php")){
+                die ("Missing dependendec 'config.php'");
+            }
+        }
+
         public static function run(){
             $app = new self();
             return;
