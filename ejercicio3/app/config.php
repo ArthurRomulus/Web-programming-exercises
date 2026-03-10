@@ -9,3 +9,5 @@
     define('DB_HOST', IS_LOCAL ? 'localhost' : 'db');
     define('DB_USER', IS_LOCAL ? 'root' : 'root');
     define('DB_PASS', IS_LOCAL ? '' : 'rootpassword');
+
+    define ("CLASSES", ROOT . 'classes' . DS);
