@@ -16,10 +16,9 @@
 
         public static function run(){
             $app = new self();
-                        
+            return;
         }
     }
 
-    run();
-
+    
 ?>
