@@ -12,6 +12,8 @@
 
         private function init(){
             print_r($_GET);
+            this -> initConfig();
+            echo CONTROLLERS;
         }
 
         private function initConfig() {
@@ -19,7 +21,6 @@
                 die ("Missing dependendec 'config.php'");
             }
         }
-
         public static function run(){
             $app = new self();
             return;
