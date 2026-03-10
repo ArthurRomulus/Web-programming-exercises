@@ -16,6 +16,7 @@
 
         public static function run(){
             $app = new self();
+                        
         }
     }
 
