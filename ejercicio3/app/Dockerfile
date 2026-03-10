@@ -25,5 +25,6 @@ RUN apt-get update && apt-get install -y \
 # Habilitar mod_rewrite
 RUN a2enmod rewrite
 
+COPY ./apache/vhosts.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/www/html
