@@ -1,11 +1,9 @@
 <?php
 
-    namespace app;
+   namespace app;
 
-    use app\App;
+   use app\App;
 
-    require __DIR__ . "/../app.php";
+   require __DIR__ . "/../app.php";
 
-
-
-?>
+   App::run();
