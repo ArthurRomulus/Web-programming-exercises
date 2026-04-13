@@ -18,4 +18,14 @@
         View::render( 'error', $response);
 
         }
+
+        public function error400( $a ){
+            $response = [
+                'title' => "Error: metodo no disponible",
+                'code' => 400,
+                'metodo' => $a
+            ];
+            View::render('error', $response);
+
+        }
     }
